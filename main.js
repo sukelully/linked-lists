@@ -1,4 +1,9 @@
 import LinkedList from "./src/LinkedList.js";
 
-const list = LinkedList("test");
-list.greet();
+const list = LinkedList();
+
+list.append("dog");
+list.append("cat");
+list.append("ant");
+
+// console.log(list.toString());
