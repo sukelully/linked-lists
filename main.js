@@ -6,8 +6,3 @@ list.append("dog");
 list.append("cat");
 list.append("ant");
 list.prepend("dinosaur");
-
-console.log(list.toString());
-console.log(list.contains("ant"));
-console.log(list.find("ant"));
-// console.log(list.toString());
