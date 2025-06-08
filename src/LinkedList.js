@@ -82,6 +82,19 @@ export default function LinkedList() {
     return false;
   }
 
+  const find = (val) => {
+    let current = head;
+    let count = 0;
+
+    while (current) {
+      if (current.getVal() === val) return count;
+      count++;
+      current = current.getNext();
+    }
+
+    return null;
+  }
+
   const toString = () => {
     let outputString = `( ${head.getVal()} ) -> `;
     let current = head;
@@ -103,6 +116,7 @@ export default function LinkedList() {
     at,
     pop,
     contains,
+    find,
     toString,
   };
 }
