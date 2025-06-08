@@ -10,3 +10,4 @@ console.log(list.getHead().getVal());
 console.log(list.getTail().getVal());
 
 console.log(list.toString());
+console.log(list.size());

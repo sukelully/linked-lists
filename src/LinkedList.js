@@ -28,15 +28,22 @@ export default function LinkedList() {
       node.setNext(head);
       head = node;
     }
+  };
+
+  const size = () => {
+    let count = 0;
+    let current = head;
+
+    while (current) {
+      count++;
+      current = current.getNext();
+    }
+    return count;
   }
 
-  const getHead = () => {
-    return head;
-  }
+  const getHead = () => head;
 
-  const getTail = () => {
-    return tail;
-  }
+  const getTail = () => tail;
 
   const toString = () => {
     let outputString = `( ${head.getVal()} ) -> `;
@@ -46,15 +53,16 @@ export default function LinkedList() {
       current = current.getNext();
       outputString += `( ${current.getVal()} ) -> `;
     }
-    outputString += 'null';
+    outputString += "null";
     return outputString;
-  }
+  };
 
   return {
     append,
     prepend,
+    size,
     getHead,
     getTail,
-    toString
+    toString,
   };
 }
