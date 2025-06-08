@@ -45,6 +45,18 @@ export default function LinkedList() {
 
   const getTail = () => tail;
 
+  const at = (index) => {
+    if (index < 0 || index >= size()) return "Error";
+
+    let current = head;
+
+    for (let i = 0; i < index; i++) {
+      current = current.getNext();
+    }
+
+    return current;
+  }
+
   const toString = () => {
     let outputString = `( ${head.getVal()} ) -> `;
     let current = head;
@@ -63,6 +75,7 @@ export default function LinkedList() {
     size,
     getHead,
     getTail,
+    at,
     toString,
   };
 }

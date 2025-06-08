@@ -11,3 +11,4 @@ console.log(list.getTail().getVal());
 
 console.log(list.toString());
 console.log(list.size());
+console.log(list.at(3).getVal());
