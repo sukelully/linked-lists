@@ -6,4 +6,4 @@ list.append("dog");
 list.append("cat");
 list.append("ant");
 
-// console.log(list.toString());
+console.log(list.toString());
