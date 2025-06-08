@@ -2,33 +2,25 @@ import Node from "./Node.js";
 
 export default function LinkedList() {
   let head = null;
-  let current = head;
   
   const append = (val) => {
     const node = Node(val);
+    let current = head;
+    
     if (!head) {
+      console.log(node.getVal());
       head = node;
     } else {
-      while (!current.getNext()) {
-        current.setNext(node);
-        console.log(current.getVal());
+      while (current.getNext()) {
         current = current.getNext();
       }
+      console.log(node.getVal());
+      current.setNext(node);
     }
   };
 
   const toString = () => {
-    if (!head) return;
-    let outputString = head.getVal();
-    let current = head;
-
-    while (!current.getNext()) {
-      console.log(current.getVal());
-      current = current.getNext();
-      outputString += current.getVal();
-    }
-
-    return outputString;
+    
   }
 
   return {
