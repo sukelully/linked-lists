@@ -57,6 +57,21 @@ export default function LinkedList() {
     return current;
   }
 
+  const pop = () => {
+    let popped = null;
+    if (size() === 0) return;
+    if (size() === 1) {
+      head = null;
+      popped = tail.getVal();
+      tail = null;
+    } else {
+      popped = tail.getVal();
+      tail = at(size() - 2);
+      tail.setNext(null);
+    }
+    return popped;
+  }
+
   const toString = () => {
     let outputString = `( ${head.getVal()} ) -> `;
     let current = head;
@@ -76,6 +91,7 @@ export default function LinkedList() {
     getHead,
     getTail,
     at,
+    pop,
     toString,
   };
 }

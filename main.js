@@ -6,9 +6,7 @@ list.append("dog");
 list.append("cat");
 list.append("ant");
 list.prepend("dinosaur");
-console.log(list.getHead().getVal());
-console.log(list.getTail().getVal());
 
 console.log(list.toString());
-console.log(list.size());
-console.log(list.at(3).getVal());
+console.log(list.pop());
+console.log(list.toString());
