@@ -72,6 +72,16 @@ export default function LinkedList() {
     return popped;
   }
 
+  const contains = (val) => {
+    let current = head;
+
+    while (current) {
+      if (current.getVal() === val) return true;
+      current = current.getNext();
+    }
+    return false;
+  }
+
   const toString = () => {
     let outputString = `( ${head.getVal()} ) -> `;
     let current = head;
@@ -92,6 +102,7 @@ export default function LinkedList() {
     getTail,
     at,
     pop,
+    contains,
     toString,
   };
 }
