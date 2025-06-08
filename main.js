@@ -5,5 +5,8 @@ const list = LinkedList();
 list.append("dog");
 list.append("cat");
 list.append("ant");
+list.prepend("dinosaur");
+console.log(list.getHead().getVal());
+console.log(list.getTail().getVal());
 
 console.log(list.toString());
